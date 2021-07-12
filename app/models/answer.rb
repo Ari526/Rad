@@ -1,6 +1,6 @@
-class Question < ActiveRecord::Base
+class Answer < ActiveRecord::Base
 
-	has_many :answers
+    belongs_to :question
 
 	def gravatar
 		"http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email)}"
